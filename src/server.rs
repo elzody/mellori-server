@@ -32,6 +32,7 @@ fn handle_stream(mut stream: TcpStream) {
         let request = HttpRequest::from(data);
 
         println!("{} {} {}", request.version, request.method, request.path);
+        println!("{:?}", request.headers);
 
         break;
       }
